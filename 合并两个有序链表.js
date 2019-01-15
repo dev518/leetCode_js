@@ -11,7 +11,9 @@
  * @return {ListNode}
  */
 
- //递归思路最为简单，也好理解
+ 
+
+ //递归思也路最为简单，好理解
 var mergeTwoLists = function(l1, l2) {
     if(l1 == null){
         return l2;

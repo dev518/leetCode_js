@@ -1,9 +1,11 @@
 var maxProfit = function(prices) {
-    let pfofit = 0;
-    for (let index = 0; index < prices.length - 1; ++index) {
-        if(prices[index + 1]> prices[index]){
-            profit += prices[index + 1] - prices[index];
-        }
+    let profit = 0;
+    let buy = 1000000;
+    for (let index = 0; index < prices.length; ++index) {
+       buy = Math.min(prices[index],buy);
+       profit = Math.max(profit,prices[index] - buy)
+       console.log(buy ,prices[index])
     }
+    return profit;
 };
-//贪心算法，因为是个单向流，
+
